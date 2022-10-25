@@ -4,7 +4,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y ubuntu-desktop x
 
 RUN rm /run/reboot-required*
 
-RUN useradd -m testuser -p $(openssl passwd 1234)
+RUN useradd -m testuser -p $(openssl passwd 123)
 RUN usermod -aG sudo testuser
 
 RUN apt install -y xrdp
